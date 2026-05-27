@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Microsoft JhengHei", "Noto Sans TC", sans-serif;
+  background: linear-gradient(135deg, #eef3ff, #f8fbff);
+  color: #1f2937;
+}
+
+main {
+  max-width: 980px;
+  margin: 48px auto;
+  padding: 36px;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(31, 58, 95, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 36px;
+  color: #1e3a8a;
+  letter-spacing: 1px;
+}
+
+p {
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+h2 {
+  margin-top: 36px;
+  color: #334155;
+  font-size: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 24px 0;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  background: white;
+}
+
+th {
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  font-weight: 600;
+  padding: 16px 12px;
+  font-size: 15px;
+}
+
+td {
+  padding: 14px 12px;
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  color: #334155;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+input {
+  width: 90%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 15px;
+  background: #f8fafc;
+  transition: 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6366f1;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+button {
+  margin: 10px 8px 10px 0;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.32);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+#resultTable td:nth-child(1) {
+  font-weight: 700;
+  color: #2563eb;
+}
+
+#resultTable td:nth-child(6) {
+  font-weight: 700;
+  color: #dc2626;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin: 20px;
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  input {
+    width: 100%;
+  }
+}

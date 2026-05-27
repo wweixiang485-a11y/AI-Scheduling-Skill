@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>AI 智慧排程 Skill</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>AI 智慧排程 Skill</h1>
+    <p>輸入任務資料後，系統會依照 EDD（Earliest Due Date）規則進行排程。</p>
+
+    <table id="inputTable">
+      <tr>
+        <th>任務名稱</th>
+        <th>加工時間</th>
+        <th>交期</th>
+      </tr>
+      <tr>
+        <td><input value="A"></td>
+        <td><input type="number" value="4"></td>
+        <td><input type="number" value="8"></td>
+      </tr>
+      <tr>
+        <td><input value="B"></td>
+        <td><input type="number" value="3"></td>
+        <td><input type="number" value="6"></td>
+      </tr>
+      <tr>
+        <td><input value="C"></td>
+        <td><input type="number" value="5"></td>
+        <td><input type="number" value="12"></td>
+      </tr>
+    </table>
+
+    <button onclick="addRow()">新增任務</button>
+    <button onclick="scheduleEDD()">開始排程</button>
+
+    <h2>排程結果</h2>
+    <table id="resultTable"></table>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
