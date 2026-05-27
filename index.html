@@ -1,45 +1,139 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI 智慧排程 Skill</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
+
 <body>
+
+  <div class="background-glow"></div>
+
   <main>
-    <h1>AI 智慧排程 Skill</h1>
-    <p>輸入任務資料後，系統會依照 EDD（Earliest Due Date）規則進行排程。</p>
 
-    <table id="inputTable">
-      <tr>
-        <th>任務名稱</th>
-        <th>加工時間</th>
-        <th>交期</th>
-      </tr>
-      <tr>
-        <td><input value="A"></td>
-        <td><input type="number" value="4"></td>
-        <td><input type="number" value="8"></td>
-      </tr>
-      <tr>
-        <td><input value="B"></td>
-        <td><input type="number" value="3"></td>
-        <td><input type="number" value="6"></td>
-      </tr>
-      <tr>
-        <td><input value="C"></td>
-        <td><input type="number" value="5"></td>
-        <td><input type="number" value="12"></td>
-      </tr>
-    </table>
+    <section class="hero">
 
-    <button onclick="addRow()">新增任務</button>
-    <button onclick="scheduleEDD()">開始排程</button>
+      <div class="hero-left">
+        <div class="icon-box">
+          📊
+        </div>
 
-    <h2>排程結果</h2>
-    <table id="resultTable"></table>
+        <div>
+          <h1>AI 智慧排程 Skill</h1>
+          <p>
+            EDD（Earliest Due Date）智慧排程系統，
+            自動進行交期優先排序與延遲分析。
+          </p>
+        </div>
+      </div>
+
+      <div class="hero-tag">
+        AI Workflow Dashboard
+      </div>
+
+    </section>
+
+    <section class="dashboard-grid">
+
+      <div class="card">
+
+        <h2>任務輸入</h2>
+
+        <table id="inputTable">
+          <tr>
+            <th>任務</th>
+            <th>加工時間</th>
+            <th>交期</th>
+          </tr>
+
+          <tr>
+            <td><input value="A"></td>
+            <td><input type="number" value="4"></td>
+            <td><input type="number" value="8"></td>
+          </tr>
+
+          <tr>
+            <td><input value="B"></td>
+            <td><input type="number" value="3"></td>
+            <td><input type="number" value="6"></td>
+          </tr>
+
+          <tr>
+            <td><input value="C"></td>
+            <td><input type="number" value="5"></td>
+            <td><input type="number" value="12"></td>
+          </tr>
+
+        </table>
+
+        <div class="button-group">
+          <button onclick="addRow()">新增任務</button>
+          <button onclick="scheduleEDD()">開始排程</button>
+        </div>
+
+      </div>
+
+      <div class="card stats-card">
+
+        <h2>即時統計</h2>
+
+        <div class="stats-grid">
+
+          <div class="stat-box">
+            <span>任務數量</span>
+            <h3 id="jobCount">0</h3>
+          </div>
+
+          <div class="stat-box">
+            <span>總加工時間</span>
+            <h3 id="totalTime">0</h3>
+          </div>
+
+          <div class="stat-box">
+            <span>總延遲時間</span>
+            <h3 id="totalDelay">0</h3>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="card result-section">
+
+      <div class="section-header">
+        <h2>排程結果</h2>
+        <div class="status-badge">
+          EDD Rule Active
+        </div>
+      </div>
+
+      <table id="resultTable"></table>
+
+    </section>
+
+    <section class="card">
+
+      <h2>加工時間分析</h2>
+
+      <canvas id="scheduleChart"></canvas>
+
+    </section>
+
   </main>
 
   <script src="script.js"></script>
+
 </body>
+
 </html>
